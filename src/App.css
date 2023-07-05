@@ -1,0 +1,59 @@
+.section {
+  height: 100vh;
+}
+.section > * {
+  flex: 1;
+}
+
+.section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section > div > div {
+  display: flex;
+}
+
+.section .play-button {
+  position: relative;
+  width: 4rem;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+}
+
+.section .play-button:hover {
+  background-color: black;
+}
+
+.section .play-button:hover > img {
+  filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(186deg) brightness(110%) contrast(100%);
+}
+
+.section .play-button > img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section > div > p {
+  color: #000;
+  font-size: 6rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media screen and (min-width: 673px) {
+  .section {
+    display: flex;
+  }
+
+  .section > textarea{
+    width: 50%;
+  }
+}
